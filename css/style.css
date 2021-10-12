@@ -18,6 +18,30 @@ header {
   background-color: #6a6c6e;
   z-index: 1000;
 }
+.gradient-button {
+  text-decoration: none;
+  display: inline-block;
+  color: #d6e4e7;
+  padding: 10px 20px;
+  margin: 5px 5px;
+  border-radius: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-image: linear-gradient(
+    to right,
+    #70728db9 0%,
+    #bb797e 51%,
+    rgb(75, 73, 182) 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
 :target {
   display: block;
   position: relative;
@@ -182,58 +206,6 @@ a.bt:active {
 }
 .boxImg:hover {
   border: 5px inset #b7bab7;
-}
-
-/* sidebar section */
-.my-story-sidebar {
-  position: fixed;
-  text-align: left;
-  margin: 100px -150px 0 0px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 15px;
-  background-color: rgba(208, 240, 233, 0.911);
-  box-shadow: 5px 5px 20px rgb(125, 137, 161);
-}
-.my-story-sidebar img {
-  display: block;
-  margin: 0 auto;
-}
-.li-nav li {
-  margin-bottom: 10px;
-  width: 200px;
-}
-.li-nav a {
-  text-decoration: none;
-  color: #6a6c6e;
-  font-weight: 700;
-}
-.li-nav a:hover {
-  text-decoration: underline;
-}
-.gradient-button {
-  text-decoration: none;
-  display: inline-block;
-  color: #d6e4e7;
-  padding: 10px 20px;
-  margin: 5px 5px;
-  border-radius: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background-image: linear-gradient(
-    to right,
-    #70728db9 0%,
-    #bb797e 51%,
-    rgb(75, 73, 182) 100%
-  );
-  background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: 0.5s;
-}
-.gradient-button:hover {
-  background-position: right center;
 }
 
 /* story section */
