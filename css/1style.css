@@ -1,3 +1,4 @@
+/* main section */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +6,98 @@
 }
 html {
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+}
+/* navbar */
+.wrappper {
+  display: flex;
+  text-align: center;
+}
+.navbar {
+  height: 30px;
+  background-color: #666;
+  min-width: 470px;
+  list-style-type: none;
+  top: 0px;
+}
+.navbar ul {
+  display: none;
+  background-color: #f90;
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.navbar li {
+  float: left;
+  position: relative;
+  height: 100%;
+}
+.navbar li:hover ul {
+  display: block;
+}
+.navbar li:hover {
+  background-color: #f90;
+}
+.navbar li a {
+  display: block;
+  padding: 6px;
+  width: 100px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+}
+.navbar ul li {
+  float: none;
+}
+.navbar ul li:hover {
+  background-color: #666;
+}
+nav {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  text-align: center;
+  background-color: #6a6c6e;
+  z-index: 1000;
+}
+.gradient-button {
+  text-decoration: none;
+  display: inline-block;
+  color: #d6e4e7;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  border-radius: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-image: linear-gradient(
+    to right,
+    #70728db9 0%,
+    #bb797e 51%,
+    rgb(75, 73, 182) 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+:target {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
 }
 div.scrollup {
   position: fixed; /* фиксированная позиция */
@@ -24,7 +113,6 @@ div.scrollup {
   cursor: pointer; /* форма курсора */
   display: none; /* не отображать элемент */
   text-align: center; /*выравнивание содержимого элемента по центру */
-  z-index: 10;
 }
 div.scrollup:hover {
   background-color: rgba(
@@ -34,49 +122,10 @@ div.scrollup:hover {
     0.616
   ); /* цвет заднего фона при наведении */
 }
-.wrapper-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1001;
-  font-size: 25px;
-  background-color: rgb(43, 66, 134);
-}
-.menu {
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  list-style-type: none;
-}
-.menu ul {
-  display: none;
-  list-style-type: none;
-  background-color: rgb(41, 138, 130);
-}
-.menu li {
-}
-.menu li:hover ul {
-  display: block;
-}
-.menu li:hover {
-  background-color: rgb(30, 26, 77);
-}
-.menu li a {
-  display: block;
-  padding: 11px;
-  text-decoration: none;
-  width: 200px;
-  text-align: center;
-  color: rgb(169, 212, 194);
-}
-.menu ul li:hover {
-  background-color: rgb(40, 59, 58);
-}
 
-/* first page */
+/* first page*/
 .dws-wrapper {
-  /* background-image: url('../img/Back10.jpg'); добавил для исправления параллакса*/
+  background-image: url('../img/Back10.jpg');
   -moz-background-size: 100%; /* Firefox 3.6+ */
   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
   -o-background-size: 100%; /* Opera 9.6+ */
@@ -84,16 +133,15 @@ div.scrollup:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0 0px 0;
+  padding: 350px 0 350px 0;
   width: 100%;
 }
 .boxImg {
-  border-radius: 100px;
-  z-index: 3; /* добавил для исправления параллакса */
   position: relative;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 430px;
   height: 300px;
+  border: 5px solid rgb(70, 6, 6);
   overflow: hidden;
 }
 .boxImg img {
@@ -128,7 +176,7 @@ div.scrollup:hover {
 .text {
   position: absolute;
   top: 15%;
-  color: rgb(202, 236, 238);
+  color: rgb(159, 168, 216);
   text-align: center;
   z-index: 10;
 }
@@ -150,10 +198,10 @@ a.bt {
   font-size: 18px;
   top: 100%;
   left: 29%;
-  color: rgb(224, 243, 245);
+  color: rgb(13, 135, 184);
   text-decoration: none;
   text-transform: uppercase;
-  border: 3px solid rgb(206, 220, 224);
+  border: 3px solid rgb(13, 135, 184);
   padding: 5px 30px;
   border-radius: 6px;
   opacity: 0;
@@ -179,11 +227,11 @@ a.bt:hover::before {
   transition: 0.5s ease-in-out;
 }
 a.bt:active {
-  border: 2px solid rgb(154, 173, 46);
-  color: rgb(46, 173, 68);
+  border: 2px solid rgb(228, 233, 235);
+  color: rgb(228, 233, 235);
 }
 .boxImg:hover img {
-  transform: rotate(-30deg) scale(0.7);
+  transform: rotate(-30deg) scale(1.5);
   filter: blur(2px);
 }
 .boxImg:hover a.bt {
@@ -208,101 +256,69 @@ a.bt:active {
   opacity: 1;
 }
 .boxImg:hover {
-  /* border: 5px inset #b7bab7; */
+  border: 5px inset #b7bab7;
 }
-/* first page end */
 
-/* main section */
-.main-content {
+/* story section */
+.my-story-content {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  background-image: url('../img/protector.jpg');
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
 }
-.time {
-  margin-top: 2200px;
+.my-story-text {
+  text-align: justify;
+  padding: 0 20em 0 20em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
-/* wrapper mountain */
-.page {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -170px;
-  left: 0;
-}
-.parallax {
-  position: relative;
-  height: 100%;
-}
-.parallax__mountain {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.parallax__mountain_1 {
-  background: url('../img/m_1.png') 0 0 / cover no-repeat;
-  /* z-index: -1000; */
-}
-.parallax__mountain_2 {
-  background: url('../img/m_2.png') bottom right / 45% no-repeat;
-  /* z-index: -999; */
-  z-index: 1;
-}
-.parallax__mountain_3 {
-  background: url('../img/m_3.png') left bottom / 100% no-repeat;
-  /* z-index: -999; */
-  z-index: 1;
-}
-.parallax__fog {
-  background: url('../img/fog_1.png') bottom / 100% no-repeat;
-  /* z-index: -998; */
-  z-index: 2;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-.content {
-  position: relative;
-}
-.content__body {
-  max-width: 1170px;
-  margin: 0px auto;
-}
-.content__header {
+.my-story-text h2,
+h3 {
   text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding: 0px 20px;
 }
-.content__title {
-  font-size: 100px;
+.my-story-text img {
+  display: block;
+  margin: 0 auto;
 }
-.content__subtitle {
-  font-size: 35px;
+.article {
+  margin-bottom: 50px;
+  background-color: rgba(208, 240, 233, 0.911);
+  box-shadow: 5px 5px 20px rgb(125, 137, 161);
+  padding: 10px 70px 40px 70px;
 }
-.content__article {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
-  font-size: 18px;
+.article-story,
+.article-story-main {
   line-height: 24px;
 }
-.content__article p {
-  margin-bottom: 20px;
+.article-story-main {
+  text-align: center;
 }
-/* wrapper mountain end*/
-
+.main-article-story-center {
+  text-align: center;
+}
 /* footer section */
 footer {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
   padding-bottom: 5px;
   padding-right: 20px;
   text-align: right;
   font-size: 20px;
   font-weight: 700;
   font-style: italic;
-  color: rgb(34, 22, 104);
+  color: rgb(53, 83, 25);
+  background-image: url('../img/protector.jpg');
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
 }
-footer p img {
+footer img {
   padding-right: 50px;
-  width: 120px;
 }
