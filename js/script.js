@@ -64,7 +64,7 @@ $(document).ready(function () {
         // при прокрутке окна (window)
         $(window).scroll(function () {
             // если пользователь прокрутил страницу более чем на 200px
-            if ($(this).scrollTop() > 200) {
+            if ($(this).scrollTop() > 800) {
                 // то сделать кнопку scrollup видимой
                 $('.scrollup').fadeIn();
             }
