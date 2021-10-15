@@ -52,6 +52,9 @@ div.scrollup:hover {
   height: 60px;
   list-style-type: none;
 }
+.home-button {
+  margin-top: -40px;
+}
 .menu ul {
   display: none;
   list-style-type: none;
