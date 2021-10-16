@@ -37,6 +37,9 @@ div.scrollup:hover {
     0.616
   ); /* цвет заднего фона при наведении */
 }
+
+/* header section */
+/* header section first part */
 .wrapper-menu {
   position: fixed;
   top: 0;
@@ -53,36 +56,27 @@ div.scrollup:hover {
   list-style-type: none;
 }
 .home-button {
-  margin-top: -40px;
+  padding: 10px;
 }
 .menu ul {
   display: none;
   list-style-type: none;
   background-color: rgb(113, 124, 72);
 }
-/* .menu li {
-} */
-.menu li:hover ul {
-  display: block;
-}
 .menu li:hover {
   background-color: #424242;
 }
 .menu li a {
   display: block;
-  padding: 11px;
   text-decoration: none;
   width: 200px;
   text-align: center;
   color: rgb(169, 212, 194);
 }
-.menu ul li:hover {
-  background-color: #424242;
-}
+/* header section first part end */
 
-/* first page */
+/* header section second part */
 .dws-wrapper {
-  /* background-image: url('../img/Back10.jpg'); добавил для исправления параллакса*/
   -moz-background-size: 100%; /* Firefox 3.6+ */
   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
   -o-background-size: 100%; /* Opera 9.6+ */
@@ -95,7 +89,7 @@ div.scrollup:hover {
 }
 .boxImg {
   border-radius: 100px;
-  z-index: 3; /* добавил для исправления параллакса */
+  z-index: 3;
   position: relative;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 430px;
@@ -212,16 +206,11 @@ a.bt:active {
   transform: scale(1);
   opacity: 1;
 }
-/* border: 5px inset #b7bab7; */
-/* .boxImg:hover {
-} */
-/* first page end */
+/* header section second part end*/
+/* header section end */
 
 /* main section */
-/* .main-content {
-  flex: 1 0 auto;
-} */
-/* wrapper mountain */
+/* mountain section */
 .page {
   position: absolute;
   width: 100%;
@@ -242,21 +231,17 @@ a.bt:active {
 }
 .parallax__mountain_1 {
   background: url('../img/m_1.png') 0 0 / cover no-repeat;
-  /* z-index: -1000; */
 }
 .parallax__mountain_2 {
   background: url('../img/m_2.png') bottom right / 45% no-repeat;
-  /* z-index: -999; */
   z-index: 1;
 }
 .parallax__mountain_3 {
   background: url('../img/m_3.png') left bottom / 100% no-repeat;
-  /* z-index: -999; */
   z-index: 1;
 }
 .parallax__fog {
   background: url('../img/fog_1.png') bottom / 100% no-repeat;
-  /* z-index: -998; */
   z-index: 2;
   position: fixed;
   height: 100%;
@@ -285,9 +270,6 @@ a.bt:active {
 .content__title {
   font-size: 60px;
 }
-.content__subtitle {
-  /* font-size: 35px; */
-}
 .content__article {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 30px;
@@ -297,14 +279,15 @@ a.bt:active {
 .content__article p {
   margin-bottom: 20px;
 }
-/* wrapper mountain end*/
+/* mountain section end*/
 
 /* footer section */
 footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 30px;
   padding-bottom: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   font-style: italic;
   color: rgb(40, 35, 71);
@@ -312,3 +295,8 @@ footer {
 footer p img {
   width: 100px;
 }
+footer p {
+  margin: 10px;
+}
+/* footer section end */
+/* main section end */
