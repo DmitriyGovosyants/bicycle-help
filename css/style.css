@@ -39,7 +39,7 @@ div.scrollup:hover {
 }
 
 /* header section */
-/* header section first part */
+/* menu section */
 .wrapper-menu {
   position: fixed;
   top: 0;
@@ -73,9 +73,9 @@ div.scrollup:hover {
   text-align: center;
   color: rgb(169, 212, 194);
 }
-/* header section first part end */
+/* menu section end */
 
-/* header section second part */
+/* dws-wrapper */
 .dws-wrapper {
   -moz-background-size: 100%; /* Firefox 3.6+ */
   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
@@ -91,7 +91,7 @@ div.scrollup:hover {
   border-radius: 100px;
   z-index: 3;
   position: relative;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   width: 430px;
   height: 300px;
   overflow: hidden;
@@ -128,7 +128,7 @@ div.scrollup:hover {
 .text {
   position: absolute;
   top: 15%;
-  color: #50504a;
+  color: #2d2b30;
   text-align: center;
   z-index: 10;
 }
@@ -138,7 +138,7 @@ div.scrollup:hover {
   transition: 0.5s;
 }
 .text p {
-  font-size: 22px;
+  font-size: 24px;
   margin: 30px 100px;
   transform: scale(2);
   transition: 0.5s;
@@ -146,13 +146,13 @@ div.scrollup:hover {
 }
 a.bt {
   position: absolute;
-  font-size: 18px;
+  font-size: 25px;
   top: 100%;
-  left: 29%;
-  color: #2e3435;
+  left: 22%;
+  color: #2d2b30;
   text-decoration: none;
   text-transform: uppercase;
-  border: 3px solid #2e3435;
+  border: 3px solid #2d2b30;
   padding: 5px 30px;
   border-radius: 6px;
   opacity: 0;
@@ -174,12 +174,12 @@ a.bt::before {
   transform: skewX(-45deg);
 }
 a.bt:hover::before {
-  left: 190px;
+  left: 250px;
   transition: 0.5s ease-in-out;
 }
 a.bt:active {
-  border: 2px solid rgb(72, 80, 45);
-  color: rgb(72, 80, 45);
+  border: 2px solid #ffff00;
+  color: #ffff00;
 }
 .boxImg:hover img {
   transform: rotate(-30deg) scale(0.7);
@@ -206,7 +206,7 @@ a.bt:active {
   transform: scale(1);
   opacity: 1;
 }
-/* header section second part end*/
+/* dws-wrapper end*/
 /* header section end */
 
 /* main section */
